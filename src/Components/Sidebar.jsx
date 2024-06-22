@@ -59,7 +59,6 @@ const Sidebar = ({ isVisible, toggleSidebar }) => {
           <img src="channel-logo.png" alt="Channel Logo" className="w-6 h-6 rounded-full" />
           <span className="ml-4 text-gray-700">Channel Name</span>
         </div>
-        {/* Add more subscription items here */}
         <div className="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
           <FiChevronDown className="w-6 h-6 text-gray-700" />
           <span className="ml-4 text-gray-700">Show more</span>
@@ -70,7 +69,6 @@ const Sidebar = ({ isVisible, toggleSidebar }) => {
           <MdOutlineExplore className="w-6 h-6 text-gray-700" />
           <span className="ml-4 text-gray-700">Trending</span>
         </div>
-        {/* Add more explore items here */}
       </div>
     </div>
   );

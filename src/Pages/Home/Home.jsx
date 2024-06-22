@@ -1,10 +1,13 @@
 import React from 'react'
-import Sidebar from '../../Components/Sidebar'
+import Feed from '../../Components/Feed'
+
 
 const Home = () => {
   return (
     <>
-    <Sidebar/>
+    <div >
+      <Feed/>
+    </div>
     </>
   )
 }
