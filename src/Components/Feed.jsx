@@ -1,5 +1,6 @@
 import React from 'react';
 import VideoCard from './VideoCard';
+import { Link } from 'react-router-dom';
 
 const videoData = [
   {
@@ -177,7 +178,7 @@ const videoData = [
 
 const Feed = () => {
   return (
-    <div className="flex-1 p-4  grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-[80px]">
+    <Link to={`video/20/4521`} className="flex-1 p-4  grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-[80px]">
       {videoData.map((video, index) => (
         <VideoCard
           key={index}
@@ -188,7 +189,7 @@ const Feed = () => {
           time={video.time}
         />
       ))}
-    </div>
+    </Link>
   );
 };
 

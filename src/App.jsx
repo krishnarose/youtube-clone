@@ -34,7 +34,7 @@ const MainContent = ({ isSidebarVisible, toggleSidebar }) => {
       <div className={`flex-1 ${isHomePage ? 'ml-64' : ''}`}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/video" element={<Video/>} />
+          <Route path="/video/:categoryId/:videoId" element={<Video/>} />
           {/* Add other routes here */}
         </Routes>
       </div>
