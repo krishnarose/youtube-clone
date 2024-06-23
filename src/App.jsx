@@ -7,9 +7,14 @@ import Video from "./Pages/video/Video";
 
 const App = () => {
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('0'); // Default category
 
   const toggleSidebar = () => {
     setIsSidebarVisible(!isSidebarVisible);
+  };
+
+  const handleCategoryChange = (category) => {
+    setSelectedCategory(category);
   };
 
   return (
@@ -17,24 +22,29 @@ const App = () => {
       <BrowserRouter>
         <Navbar toggleSidebar={toggleSidebar} />
         <div className="flex">
-          <MainContent isSidebarVisible={isSidebarVisible} toggleSidebar={toggleSidebar} />
+          <MainContent 
+            isSidebarVisible={isSidebarVisible} 
+            toggleSidebar={toggleSidebar} 
+            selectedCategory={selectedCategory}
+            handleCategoryChange={handleCategoryChange}
+          />
         </div>
       </BrowserRouter>
     </>
   );
 };
 
-const MainContent = ({ isSidebarVisible, toggleSidebar }) => {
+const MainContent = ({ isSidebarVisible, toggleSidebar, selectedCategory, handleCategoryChange }) => {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
 
   return (
     <>
-      {isHomePage && <Sidebar isVisible={isSidebarVisible} toggleSidebar={toggleSidebar} />}
+      {isHomePage && <Sidebar isVisible={isSidebarVisible} toggleSidebar={toggleSidebar} handleCategoryChange={handleCategoryChange} />}
       <div className={`flex-1 ${isHomePage ? 'ml-64' : ''}`}>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/video/:categoryId/:videoId" element={<Video/>} />
+          <Route path="/" element={<Home selectedCategory={selectedCategory} />} />
+          <Route path="/video/:videoId" element={<Video />} />
           {/* Add other routes here */}
         </Routes>
       </div>
@@ -43,4 +53,3 @@ const MainContent = ({ isSidebarVisible, toggleSidebar }) => {
 };
 
 export default App;
-

@@ -14,7 +14,7 @@ const VideoCard = ({ image, title, channel, views, time }) => {
           />
           <div className="ml-3">
             <p className="text-sm font-medium text-gray-900">{channel}</p>
-            <p className="text-sm text-gray-600">{views} views • {time} ago</p>
+            <p className="text-sm text-gray-600">{views} • {time} </p>
           </div>
         </div>
       </div>

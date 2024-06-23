@@ -1,17 +1,12 @@
-import React, { useState } from 'react'
-import Feed from '../../Components/Feed'
+import React from "react";
+import Feed from "../../Components/Feed";
 
-
-const Home = () => {
-const [category, setCategory]= useState(0);
-
+const Home = ({ selectedCategory }) => {
   return (
-    <>
-    <div >
-      <Feed/>
+    <div>
+      <Feed selectedCategory={selectedCategory} />
     </div>
-    </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

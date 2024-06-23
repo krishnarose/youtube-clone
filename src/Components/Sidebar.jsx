@@ -22,8 +22,8 @@ import { MdSportsBaseball } from "react-icons/md";
 import { LiaMusicSolid } from "react-icons/lia";
 import { IoNewspaperOutline } from "react-icons/io5";
 
-const Sidebar = ({ isVisible, toggleSidebar, }) => {
-  const [category, setCategory] = useState()
+const Sidebar = ({ isVisible, toggleSidebar, handleCategoryChange}) => {
+  
   return (
     <div
       className={`bg-white h-screen w-64 overflow-y-auto shadow-md fixed ${
@@ -37,27 +37,27 @@ const Sidebar = ({ isVisible, toggleSidebar, }) => {
         />
       </div>
       <div className="py-4">
-        <div className="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer" onClick={()=>setCategory(0)}>
+        <div className="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer" onClick={()=>handleCategoryChange(0)}>
           <FiHome className="w-6 h-6 text-gray-700"  />
           <span className="ml-4 text-gray-700">Home</span>
         </div>{" "}
-        <div className="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer" onClick={()=>setCategory(20)}>
+        <div className="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer" onClick={()=>handleCategoryChange(20)}>
           <MdOutlineSportsEsports className="w-6 h-6 text-gray-700" />
           <span className="ml-4 text-gray-700">Game</span>
         </div>{" "}
-        <div className="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer" onClick={()=>setCategory(2)}>
+        <div className="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer" onClick={()=>handleCategoryChange(2)}>
           <IoCarSportSharp className="w-6 h-6 text-gray-700" />
           <span className="ml-4 text-gray-700">Automobiles</span>
         </div>{" "}
-        <div className="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer" onClick={()=>setCategory(17)}>
+        <div className="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer" onClick={()=>handleCategoryChange(17)}>
           <MdSportsBaseball className="w-6 h-6 text-gray-700" />
           <span className="ml-4 text-gray-700">Sports</span>
         </div>{" "}
-        <div className="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer" onClick={()=>setCategory(10)}>
+        <div className="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer" onClick={()=>handleCategoryChange(10)}>
           <LiaMusicSolid className="w-6 h-6 text-gray-700" />
           <span className="ml-4 text-gray-700">Musics</span>
         </div>
-        <div className="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer" onClick={()=>setCategory(25)}>
+        <div className="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer" onClick={()=>handleCategoryChange(25)}>
           <IoNewspaperOutline className="w-6 h-6 text-gray-700" />
           <span className="ml-4 text-gray-700">News</span>
         </div>

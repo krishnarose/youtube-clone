@@ -6,17 +6,19 @@ import { BiSolidDislike } from "react-icons/bi";
 import { IoIosShareAlt } from "react-icons/io";
 import { MdOutlineFileDownload } from "react-icons/md";
 
-const Playvideo = () => {
+const Playvideo = ({videoId}) => {
   return (
     <>
       <div className=" ">
         <div className="">
-          <video
-            src={video}
-            controls
-            autoPlay
-            className="mt-[80px] ml-[20px] rounded-xl w-[1000px] "
-          />
+          <iframe
+            src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+            className="mt-[80px] ml-[20px] rounded-xl w-[1000px] h-[500px]"
+          ></iframe>
           <div className="mt-4 w-[1000px]">
             <p className="lg:text-2xl lg:font-bold ml-[20px] ">
               Create YouTube Clone Using React JS | Build Complete Website Like
@@ -74,32 +76,32 @@ const Playvideo = () => {
           {/* COMMENT  STARTED */}
           <p className="text-2xl font-bold ml-4 mt-4 ">COMMENT</p>
           <div className="ml-4 mt-4">
-           
-
             <div className="mt-4 flex items-center">
-              <img src={img} alt="" className="rounded-full w-[40px]"/>
+              <img src={img} alt="" className="rounded-full w-[40px]" />
               <p className="font-bold ml-4">krishnarose2001@</p>
               <p className="ml-2"> 5 month ago</p>
             </div>
             <div className="w-[1000px] text-xl font-semibold">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur, tempore eius harum impedit asperiores reprehenderit, molestiae a iste atque ipsum debitis quis eos placeat consequuntur non! Architecto autem eius laboriosam.
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Consectetur, tempore eius harum impedit asperiores reprehenderit,
+              molestiae a iste atque ipsum debitis quis eos placeat consequuntur
+              non! Architecto autem eius laboriosam.
             </div>
-
           </div>
           <div className="ml-4 mt-4">
-           
-
             <div className="mt-4 flex items-center">
-              <img src={img} alt="" className="rounded-full w-[40px]"/>
+              <img src={img} alt="" className="rounded-full w-[40px]" />
               <p className="font-bold ml-4">krishnarose2001@</p>
               <p className="ml-2"> 1 month ago</p>
             </div>
             <div className="w-[1000px] text-xl font-semibold">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur, tempore eius harum impedit asperiores reprehenderit, molestiae a iste atque ipsum debitis quis eos placeat consequuntur non! Architecto autem eius laboriosam.
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Consectetur, tempore eius harum impedit asperiores reprehenderit,
+              molestiae a iste atque ipsum debitis quis eos placeat consequuntur
+              non! Architecto autem eius laboriosam.
             </div>
-
           </div>
-        {/* COMMENT EDEDD  */}
+          {/* COMMENT EDEDD  */}
         </div>
       </div>
     </>
