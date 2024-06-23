@@ -2,6 +2,7 @@ import React from 'react';
 import { FiMenu, FiSearch, FiMic, FiVideo, FiBell } from 'react-icons/fi';
 import img from "../assets/youtube.webp";
 import Avtar from "../assets/avtar.jpg";
+import { Link } from 'react-router-dom';
 
 const Navbar = ({ toggleSidebar }) => {
   return (
@@ -9,9 +10,9 @@ const Navbar = ({ toggleSidebar }) => {
       <div className="container mx-auto px-4 flex justify-between items-center h-16">
         <div className="flex items-center space-x-4">
           <FiMenu className="w-6 h-6 text-gray-700 cursor-pointer md:hidden" onClick={toggleSidebar} />
-          <a href="/" className="text-xl font-semibold">
+          <Link to="/" className="text-xl font-semibold">
             <img src={img} alt="YouTube Logo" className="h-8" />
-          </a>
+          </Link>
         </div>
 
         <div className="flex-1 mx-4 hidden md:flex">
