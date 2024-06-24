@@ -56,7 +56,7 @@ const Feed = ({ selectedCategory }) => {
   return (
     <div className="flex-1 p-4 grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-[80px]">
       {data.map((video, index) => (
-        <Link to={`video/${video.id}`} key={index}>
+        <Link to={`video/${selectedCategory}/${video.id}`} key={index}>
           <VideoCard
             image={video.snippet.thumbnails.high.url}
             title={video.snippet.title}

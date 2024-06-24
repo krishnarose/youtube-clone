@@ -44,7 +44,7 @@ const MainContent = ({ isSidebarVisible, toggleSidebar, selectedCategory, handle
       <div className={`flex-1 ${isHomePage ? 'ml-64' : ''}`}>
         <Routes>
           <Route path="/" element={<Home selectedCategory={selectedCategory} />} />
-          <Route path="/video/:videoId" element={<Video />} />
+          <Route path="/video/:selectedCategory/:videoId" element={<Video />} />
           {/* Add other routes here */}
         </Routes>
       </div>

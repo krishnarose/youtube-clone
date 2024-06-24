@@ -4,7 +4,7 @@ import Recommended from "../../Components/Recommended";
 import { useParams } from "react-router-dom";
 
 const Video = () => {
-  const {videoId, categoryId}= useParams();
+  const { videoId,selectedCategory } = useParams();
   return (
     <>
       <div className="flex">
@@ -12,7 +12,7 @@ const Video = () => {
           <Playvideo videoId={videoId} />
         </div>
         <div className="mt-[80px] w-[480px]">
-          <Recommended />
+          <Recommended categoryId={selectedCategory} />
         </div>
       </div>
     </>
