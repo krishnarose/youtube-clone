@@ -62,6 +62,7 @@ const Recommended = ({ categoryId }) => {
               image={video.snippet.thumbnails.medium.url}
               title={video.snippet.title}
               channel={video.snippet.channelTitle}
+              defurl={video.snippet.thumbnails.default.url}
               views={formatViews(video.statistics.viewCount)}
               time={formatTime(video.snippet.publishedAt)}
             />

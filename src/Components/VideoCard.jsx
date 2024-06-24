@@ -1,6 +1,6 @@
 import React from 'react';
 
-const VideoCard = ({ image, title, channel, views, time }) => {
+const VideoCard = ({ image, title, channel, views, time, defurl }) => {
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden">
       <img className="w-full" src={image} alt={title} />
@@ -9,7 +9,7 @@ const VideoCard = ({ image, title, channel, views, time }) => {
         <div className="flex items-center mt-2">
           <img
             className="h-10 w-10 rounded-full"
-            src="https://via.placeholder.com/40"
+            src={defurl}
             alt={channel}
           />
           <div className="ml-3">

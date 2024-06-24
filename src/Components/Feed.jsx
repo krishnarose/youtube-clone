@@ -63,6 +63,7 @@ const Feed = ({ selectedCategory }) => {
             channel={video.snippet.channelTitle}
             views={formatViews(video.statistics.viewCount)}
             time={formatTime(video.snippet.publishedAt)}
+            defurl={video.snippet.thumbnails.default.url}
           />
         </Link>
       ))}
